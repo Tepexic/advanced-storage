@@ -1,37 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MetaCoin | Truffle Webpack Demo w/ Frontend</title>
+    <title>Advanced Storage Smart Contract</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   </head>
-  <style>
-    input {
-      display: block;
-      margin-bottom: 12px;
-    }
-  </style>
-  <body>
-    <h1>MetaCoin — Example Truffle Dapp</h1>
-    <p>You have <strong class="balance">loading...</strong> META</p>
-
-    <h1>Send MetaCoin</h1>
-
-    <label for="amount">Amount:</label>
-    <input type="text" id="amount" placeholder="e.g. 95" />
-
-    <label for="receiver">To address:</label>
-    <input
-      type="text"
-      id="receiver"
-      placeholder="e.g. 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"
-    />
-
-    <button onclick="App.sendCoin()">Send MetaCoin</button>
-
-    <p id="status"></p>
-    <p>
-      <strong>Hint:</strong> open the browser developer console to view any
-      errors and warnings.
-    </p>
+  <body class="h-screen w-full bg-gray-800 text-gray-200 p-10">
+    <main class="max-w-screen-md mx-auto text-center">
+      <h1 class="text-3xl text-white mb-6">Advanced Storage Smart Contract</h1>
+      <form id="add-data" class="bg-gray-700">
+          <label for="add-data-input"> Set new data (number):</label>
+          <input id="add-data-input" type="number" class="px-4 py-2 m-4 text-gray-800">
+          <button type="submit" class="px-4 py-2 bg-blue-700 text-white font-bold">Submit</button>
+      </form>
+      
+      <h2 class="mt-6 mb-2">Smart Contract data content:</h2>
+      <div id="data" class="px-2 bg-gray-600">
+      </div>
+      <p class="text-sm text-color-gray-400 mt-6">
+        <strong>Hint:</strong> open the browser developer console to view any
+        errors and warnings.
+      </p>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>
